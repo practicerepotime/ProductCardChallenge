@@ -1,0 +1,161 @@
+:root {
+    --Dark-cyan: hsl(158, 36%, 37%);
+    --Cream: hsl(30, 38%, 92%);
+    --Very-dark-blue: hsl(212, 21%, 14%);
+    --Dark-grayish-blue: hsl(228, 12%, 48%);
+    --White: hsl(0, 0%, 100%);
+}
+
+body {
+    display: flex;
+    margin: 0;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--Cream);
+}
+
+.prod-img {
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(./images/image-product-desktop.jpg);
+}
+
+.parent {
+    display: flex;
+    
+    justify-content: center;
+    background-color: white;
+    border: transparent 1px solid;
+    height: auto;
+    width: 50%;
+    border-radius: 10px;
+}
+
+.child {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: space-evenly;
+    width: 50%;
+}
+
+.padding {
+    padding: 15px;
+}
+
+.prod-price {
+    display: flex;
+    align-items: center;
+}
+
+.btn {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--Dark-cyan);
+    padding: 15px;
+    width: 90%;
+    align-self: center;
+    border-radius: 5px;
+    color: white;
+}
+
+p {
+    margin: 0;
+}
+
+.tag {
+    color: var(--Very-dark-blue);
+    letter-spacing: 10px;
+}
+
+.name {
+    font-size: 3rem;
+    font-weight: 400;
+}
+
+.desc {
+    font-size: 1rem;
+    color: var(--Dark-grayish-blue);
+}
+
+.prod-curr-price {
+    font-size: 3rem;
+    font-weight: 900;
+    color: var(--Dark-cyan);
+}
+
+.prod-prev-price {
+    color: var(--Very-dark-blue);
+    font-size: 1rem;
+    font-weight: 400;
+    padding: 0px 15px;
+    text-decoration: line-through;
+}
+
+
+@media only screen and (max-width: 1140px) {
+    .prod-img {
+        height: 50vh;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        background-image: url(./images/image-product-mobile.jpg);
+    }
+
+    p {
+        padding: 0 15px;
+    }
+
+    .parent {
+        flex-direction: column;
+        width: 90%;
+    }
+
+    .child {
+        gap: 20px;
+        justify-content: space-evenly;
+        width: 100%;
+    }
+
+    .btn {
+        width: 85%;
+        margin-bottom: 15px;
+        align-self: center;
+    }
+
+    .tag {
+        margin-top: 10px;
+        letter-spacing: 10px;
+        color: var(--Very-dark-blue);;
+    }
+
+    .name {
+        font-size: 3rem;
+        font-weight: 400;
+    }
+
+    .desc {
+        font-size: 1rem;
+        color: grey;
+    }
+
+    .prod-curr-price {
+        font-size: 3rem;
+        font-weight: 900;
+        color: green;
+    }
+
+    .prod-prev-price {
+        color: grey;
+        font-size: 1rem;
+        font-weight: 400;
+    }
+
+    .padding {
+        padding: 0;
+    }
+}
